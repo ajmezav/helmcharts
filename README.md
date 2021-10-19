@@ -11,7 +11,7 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
    ![image](https://user-images.githubusercontent.com/56460214/137990437-f85fa675-086a-4997-8982-5f231bd69491.png)
 
-   _Para este ejemplo solo dejaremos los siguientes archivos_
+   _Para este ejemplo solo dejaremos los siguientes archivos:_
 
    ![image](https://user-images.githubusercontent.com/56460214/137990536-00d1ad70-ba77-4b4f-9ccf-ca9e8d9c0bdb.png)
 
