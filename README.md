@@ -74,7 +74,7 @@ Para ver qué opciones se pueden configurar en un chart, use `helm show values a
 
 ### Listar y remover Repos de Helm
 
-`helm repo list /n
+`helm repo list <br />
  helm repo remove apache`
 
 _Ref:_ _https://helm.sh/es/docs/intro/using_helm/_
