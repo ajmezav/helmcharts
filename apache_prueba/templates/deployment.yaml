@@ -5,7 +5,7 @@ metadata:
   labels:
     app: webserver
 spec:
-  replicas: {{.values.replica_pod}}
+  replicas: {{.Values.replica_pod}}
   selector:
     matchLabels:
       app: webserver
