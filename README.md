@@ -7,38 +7,30 @@
 
 ❯ tree prueba
 
-prueba
-├── Chart.yaml
-├── charts
-├── templates
-│   ├── NOTES.txt
-│   ├── _helpers.tpl
-│   ├── deployment.yaml
-│   ├── hpa.yaml
-│   ├── ingress.yaml
-│   ├── service.yaml
-│   ├── serviceaccount.yaml
-│   └── tests
-│       └── test-connection.yaml
-└── values.yaml
+![image](https://user-images.githubusercontent.com/56460214/137990437-f85fa675-086a-4997-8982-5f231bd69491.png)
+│   └── tests
 
-Para este ejemplo solo dejaremos los siguientes archivos ❯ tree apache_prueba
-apache_prueba
-├── Chart.yaml
-├── charts
-├── templates
-│   ├── NOTES.txt
-│   ├── _helpers.tpl
-│   └── deployment.yaml
-└── values.yaml
+Para este ejemplo solo dejaremos los siguientes archivos 
+
+![image](https://user-images.githubusercontent.com/56460214/137990536-00d1ad70-ba77-4b4f-9ccf-ca9e8d9c0bdb.png)
 
 
-donde Chart.yaml tiene el versionamient y descripcion de mi Chart, el archivo values.yaml los valores que quiero que sean leidos como parametros en mis templates y que el usuario final puede modificar al instalar el Chart , la carpeta templates contiene los manifiestos que desplegará el chart en este caso es un deployment.
 
-* Una ves tenga mis templates y Chart configurado adecuadamente procedo a crear el repositorio: helm package apache_prueba,esto basicamente comprimira toda la estrucura que contiene la información del Chart
+donde Chart.yaml tiene el versionamiento y descripcion de mi Chart, el archivo values.yaml los valores que quiero que sean leidos como parametros en mis templates y que el usuario final puede modificar al instalar el Chart , la carpeta templates contiene los manifiestos que desplegará el chart en este caso es un deployment.
+
+* Una ves tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
+ 
+_helm package apache_prueba_, esto basicamente comprimira toda la estrucura que contiene la información del Chart
+
 * Luego procedo a crear el index con siguiente comando:
 
-helm repo index .
+_helm repo index ._
+
+* Por último se publica el repositorio en algun website , para este caso se hace uso de GitHub Pages
+
+![image](https://user-images.githubusercontent.com/56460214/137991145-cdf14975-f54b-4cd7-9f71-e949bd2e17c9.png)
+
+
 Probar antes de instalar:
 helm install --dry-run myapache apache_prueba/apache_prueba
 Instalar:
