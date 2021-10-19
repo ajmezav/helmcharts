@@ -35,8 +35,8 @@ esto básicamente comprimirá toda la estructura que contiene el repositorio Hel
 * Luego se procede a crear el index con el siguiente comando:
 
 ```bash
- helm repo index .
- ```
+helm repo index .
+```
 
 * Por último se publica el repositorio en algún website , para este caso se hace uso de _GitHub Pages ref https://pages.github.com/_ 
 
@@ -61,22 +61,22 @@ esto básicamente comprimirá toda la estructura que contiene el repositorio Hel
 
  ```bash
  helm install --dry-run myapache apache/apache_prueba
-  ```
+ ```
 
 * Instalación:
 
 ```bash
- helm install myapache apache/apache_prueba
- ```
+helm install myapache apache/apache_prueba
+```
 
 ### Hacer actualización del chart instalado
 
 Para actualizar el Chart se debe crear de nuevo el repo o comprimir con _"helm package"_ y crear el nuevo _index_ , aparte de cambiar el versionamiento en el _Chart.yaml_ y publicar los cambios en Git , por último se procede a actualizar la instalación del Chart:
 
 ```bash
- helm repo update
- helm upgrade myapache apache/apache_prueba
- ```
+helm repo update
+helm upgrade myapache apache/apache_prueba
+```
 
 ### Valores parametrizables en el Chart:
 
@@ -98,8 +98,8 @@ helm uninstall myapache
 ### Listar y remover Repos de Helm
 
 ```bash
- helm repo list
- helm repo remove apache
- ```
+helm repo list
+helm repo remove apache
+```
 
 _Ref:_ _https://helm.sh/es/docs/intro/using_helm/_
