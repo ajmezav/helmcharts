@@ -3,7 +3,10 @@
  Este repo tiene el chart para instalar un apache de prueba en un cluster de K8s, el objetivo de este ejercicio se realizo para practicar la creación un Chart propio. Los pasos que se siguieron fueron los siguientes:
  
  * Se crea una carpeta donde se va almacenar toda la información del Chart y templates
- * Se crea el template de referencia con el comando: helm create apache_prueba , al hacer esto se creara la siguiente estructura:
+ 
+ * Se crea el template de referencia con el comando: 
+ 
+  `helm create apache_prueba`  , al hacer esto se creara la siguiente estructura:
 
 ❯ tree prueba
 
