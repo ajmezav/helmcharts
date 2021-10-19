@@ -6,6 +6,7 @@
  * Se crea el template de referencia con el comando: helm create apache_prueba , al hacer esto se creara la siguiente estructura:
 
 ❯ tree prueba
+
 prueba
 ├── Chart.yaml
 ├── charts
