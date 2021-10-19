@@ -1,6 +1,8 @@
 ### Helm charts: apache prueba
 
 Este repositorio tiene el chart para instalar un apache de prueba en un cluster de K8s, el objetivo de este ejercicio se realizó para practicar la creación de un Chart propio. El deployment a usar es el mismo de este ejercicio: https://github.com/ajmezav/Cronjob-with-kubectl---restart-deployment-apache/blob/main/deployment_apache.yaml . Los pasos que se siguieron fueron los siguientes:
+
+ * Tener instalado HELM en el equipo https://helm.sh/docs/intro/install/
  
  * Se crea una carpeta donde se va almacenar toda la información del Chart y templates
  
@@ -37,6 +39,10 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
  `helm repo add apache https://ajmezav.github.io/helmcharts/
   helm repo update`
+ 
+* Validar que se agrego el repositorio: 
+
+ `helm search repo apache`
 
 * Se procede a probar la instalación :
 
@@ -59,8 +65,16 @@ Se puede cambiar la cantidad de réplicas de Pods a desplegar con este chart:
 
 `helm install  myapache apache/apache_prueba --set replica_pod=2`
 
+Para ver qué opciones se pueden configurar en un chart, use `helm show values apache/apache_prueba`
+
+
 ### Uninstall Chart
 
 `helm uninstall myapache`
 
+### Listar y remover Repos de Helm
 
+`helm repo list
+helm repo remove apache`
+
+___Ref: https://helm.sh/es/docs/intro/using_helm/ ___
