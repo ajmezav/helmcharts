@@ -1,4 +1,4 @@
-## Helm charts apache prueba
+### Helm charts apache prueba
 
  Este repo tiene el chart para instalar un apache de prueba en un cluster de K8s, el objetivo de este ejercicio se realizo para practicar la creación un Chart propio. Los pasos que se siguieron fueron los siguientes:
  
@@ -8,20 +8,18 @@
  
   `helm create apache_prueba`  , al hacer esto se creara la siguiente estructura: 
 
-❯ tree prueba
 
-![image](https://user-images.githubusercontent.com/56460214/137990437-f85fa675-086a-4997-8982-5f231bd69491.png)
-│   └── tests
+   ![image](https://user-images.githubusercontent.com/56460214/137990437-f85fa675-086a-4997-8982-5f231bd69491.png)
 
-Para este ejemplo solo dejaremos los siguientes archivos 
+   _Para este ejemplo solo dejaremos los siguientes archivos_
 
-![image](https://user-images.githubusercontent.com/56460214/137990536-00d1ad70-ba77-4b4f-9ccf-ca9e8d9c0bdb.png)
+   ![image](https://user-images.githubusercontent.com/56460214/137990536-00d1ad70-ba77-4b4f-9ccf-ca9e8d9c0bdb.png)
 
 
 
-donde Chart.yaml tiene el versionamiento y descripcion de mi Chart, el archivo values.yaml los valores que quiero que sean leidos como parametros en mis templates y que el usuario final puede modificar al instalar el Chart , la carpeta templates contiene los manifiestos que desplegará el chart en este caso es un deployment.
+  ;Donde ___Chart.yaml___ tiene el versionamiento y descripcion de mi Chart, el archivo ___values.yaml___ los valores que quiero que sean leidos como parametros en mis   templates y que el usuario final puede modificar al instalar el Chart , la carpeta templates contiene los manifiestos que desplegará el chart en este caso es un deployment.
 
-* Una ves tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
+* Una ves se tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
  
 `helm package apache_prueba`, esto basicamente comprimira toda la estrucura que contiene la información del Chart
 
@@ -33,23 +31,30 @@ donde Chart.yaml tiene el versionamiento y descripcion de mi Chart, el archivo v
 
 ![image](https://user-images.githubusercontent.com/56460214/137991145-cdf14975-f54b-4cd7-9f71-e949bd2e17c9.png)
 
+### Instalar el Chart:
 
-Probar antes de instalar:
-helm install --dry-run myapache apache_prueba/apache_prueba
-Instalar:
-helm install --dry-run myapache apache_prueba/apache_prueba
-Hacer actualización del chart instalado
-helm upgrade myapache apache_prueba/apache_prueba
+* Se agrega el repositorio con:
 
-Cuando se hace una actualización en el chart no olvidar:
+ `helm repo add apache https://ajmezav.github.io/helmcharts/`
 
-crear de nuevo el repo o comprimir con "helm package" y crear el nuevo index , aparte de cambiar el versionamiento en el Chart.yaml
+* Se procede a probar la instalación :
 
-helm repo update
+ `helm install --dry-run myapache apache/apache_prueba`
 
-helm search repo apache
+* Instalación:
 
-helm repo add apache https://ajmezav.github.io/helmcharts/
+ `helm install myapache apache/apache_prueba`
 
-helm upgrade  myapache apache/apache_prueba --set replica_pod=2
-helm install 
+### Hacer actualización del chart instalado
+
+Para actualizar el Chart se debe crear de nuevo el repo o comprimir con _"helm package"_ y crear el nuevo _index_ , aparte de cambiar el versionamiento en el _Chart.yaml_ , publicar los cambios en Git y luego sí se procede a actualizar la instalación:
+
+`helm repo update
+ helm upgrade myapache apache/apache_prueba`
+
+### Valores parametrizables en el Chart:
+
+Se puede cambiar la cantidad de replicas de Pods a desplegar con este chart:
+
+`helm install  myapache apache/apache_prueba --set replica_pod=2`
+
