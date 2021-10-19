@@ -6,7 +6,7 @@
  
  * Se crea el template de referencia con el comando: 
  
-  `helm create apache_prueba`  , al hacer esto se creara la siguiente estructura:
+  `helm create apache_prueba`  , al hacer esto se creara la siguiente estructura: 
 
 ❯ tree prueba
 
@@ -23,13 +23,13 @@ donde Chart.yaml tiene el versionamiento y descripcion de mi Chart, el archivo v
 
 * Una ves tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
  
-'helm package apache_prueba', esto basicamente comprimira toda la estrucura que contiene la información del Chart
+`helm package apache_prueba`, esto basicamente comprimira toda la estrucura que contiene la información del Chart
 
 * Luego procedo a crear el index con siguiente comando:
 
-_helm repo index ._
+`helm repo index .`
 
-* Por último se publica el repositorio en algun website , para este caso se hace uso de GitHub Pages
+* Por último se publica el repositorio en algun website , para este caso se hace uso de _GitHub Pages_
 
 ![image](https://user-images.githubusercontent.com/56460214/137991145-cdf14975-f54b-4cd7-9f71-e949bd2e17c9.png)
 
