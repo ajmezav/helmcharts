@@ -8,7 +8,10 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
  
  * Se crea el template de referencia con el comando: 
  
-  `helm create apache_prueba`  , al hacer esto se creará la siguiente estructura: 
+  ```bash
+  helm create apache_prueba 
+  ```
+  , al hacer esto se creará la siguiente estructura: 
 
 
    ![image](https://user-images.githubusercontent.com/56460214/137990437-f85fa675-086a-4997-8982-5f231bd69491.png)
@@ -37,33 +40,45 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
 * Se agrega el repositorio con:
 
- `helm repo add apache https://ajmezav.github.io/helmcharts/`
-  `helm repo update`
+  ```bash
+  helm repo add apache https://ajmezav.github.io/helmcharts/
+  helm repo update
+  ```
  
 * Validar que se agrego el repositorio: 
 
- `helm search repo apache`
+ ```bash
+ helm search repo apache
+ ```
 
 * Se procede a probar la instalación :
 
- `helm install --dry-run myapache apache/apache_prueba`
+ ```bash
+ helm install --dry-run myapache apache/apache_prueba
+  ```
 
 * Instalación:
 
- `helm install myapache apache/apache_prueba`
+```bash
+ helm install myapache apache/apache_prueba
+ ```
 
 ### Hacer actualización del chart instalado
 
 Para actualizar el Chart se debe crear de nuevo el repo o comprimir con _"helm package"_ y crear el nuevo _index_ , aparte de cambiar el versionamiento en el _Chart.yaml_ y publicar los cambios en Git , por último se procede a actualizar la instalación del Chart:
 
-`helm repo update
- helm upgrade myapache apache/apache_prueba`
+```bash
+ helm repo update
+ helm upgrade myapache apache/apache_prueba
+ ```
 
 ### Valores parametrizables en el Chart:
 
 Se puede cambiar la cantidad de réplicas de Pods a desplegar con este chart:
 
-`helm install  myapache apache/apache_prueba --set replica_pod=2`
+```bash
+helm install  myapache apache/apache_prueba --set replica_pod=2
+```
 
 Para ver qué opciones se pueden configurar en un chart, use `helm show values apache/apache_prueba`
 
