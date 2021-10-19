@@ -23,7 +23,7 @@ donde Chart.yaml tiene el versionamiento y descripcion de mi Chart, el archivo v
 
 * Una ves tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
  
-_helm package apache_prueba_, esto basicamente comprimira toda la estrucura que contiene la información del Chart
+'helm package apache_prueba', esto basicamente comprimira toda la estrucura que contiene la información del Chart
 
 * Luego procedo a crear el index con siguiente comando:
 
