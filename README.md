@@ -70,7 +70,7 @@ Para ver qué opciones se pueden configurar en un chart, use `helm show values a
 
 ### Uninstall Chart
 
-`helm uninstall myapache`
+```helm uninstall myapache```
 
 ### Listar y remover Repos de Helm
 
