@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   apache_prueba:
   - apiVersion: v2
+    appVersion: 1.16.3
+    created: "2021-10-19T14:31:40.414667-05:00"
+    description: A Helm chart for Kubernetes for my apache_prueba
+    digest: e175d8ab33a9df83c32c453403b1299b522329427eab38099fb68b7d5ef0c074
+    name: apache_prueba
+    type: application
+    urls:
+    - apache_prueba-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 1.16.2
-    created: "2021-10-19T14:28:37.730639-05:00"
+    created: "2021-10-19T14:31:40.414464-05:00"
     description: A Helm chart for Kubernetes for my apache_prueba
     digest: d52b67d37acb8a3e200176b0fcfe657e2a2af58c9df0f9760c3efedb5b0209a7
     name: apache_prueba
@@ -13,7 +23,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-19T14:28:37.730394-05:00"
+    created: "2021-10-19T14:31:40.414257-05:00"
     description: A Helm chart for Kubernetes for my apache_prueba
     digest: 950c2d1d7c512ec70f539180d914ef115f690c1f60f448f844b1778f07e89598
     name: apache_prueba
@@ -23,7 +33,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-19T14:28:37.730189-05:00"
+    created: "2021-10-19T14:31:40.414009-05:00"
     description: A Helm chart for Kubernetes for my apache_prueba
     digest: 2e0ee4e12f8ce301d261b9b439d451cff9ded2859958d0cfe8afbead39388b9b
     name: apache_prueba
@@ -31,4 +41,4 @@ entries:
     urls:
     - apache_prueba-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-19T14:28:37.729699-05:00"
+generated: "2021-10-19T14:31:40.413556-05:00"
