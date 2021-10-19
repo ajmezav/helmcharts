@@ -35,7 +35,8 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
 * Se agrega el repositorio con:
 
- `helm repo add apache https://ajmezav.github.io/helmcharts/`
+ `helm repo add apache https://ajmezav.github.io/helmcharts/
+  helm repo update`
 
 * Se procede a probar la instalación :
 
@@ -58,5 +59,8 @@ Se puede cambiar la cantidad de réplicas de Pods a desplegar con este chart:
 
 `helm install  myapache apache/apache_prueba --set replica_pod=2`
 
+### Uninstall Chart
+
+`helm uninstall myapache`
 
 
