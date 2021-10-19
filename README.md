@@ -16,3 +16,12 @@ helm upgrade myapache apache_prueba/apache_prueba
 Cuando se hace una actualización en el chart no olvidar:
 
 crear de nuevo el repo o comprimir con "helm package" y crear el nuevo index , aparte de cambiar el versionamiento en el Chart.yaml
+
+helm repo update
+
+helm search repo apache
+
+helm repo add apache https://ajmezav.github.io/helmcharts/
+
+helm upgrade  myapache apache/apache_prueba --set replica_pod=2
+helm install 
