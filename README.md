@@ -86,7 +86,11 @@ Se puede cambiar la cantidad de réplicas de Pods a desplegar con este chart:
 helm install  myapache apache/apache_prueba --set replica_pod=2
 ```
 
-Para ver qué opciones se pueden configurar en un chart, use `helm show values apache/apache_prueba`
+Para ver qué opciones se pueden configurar en un chart, use:
+
+```bash
+helm show values apache/apache_prueba
+```
 
 
 ### Uninstall Chart
