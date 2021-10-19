@@ -26,11 +26,17 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
 * Una vez se tenga los templates y Chart configurado adecuadamente se procede a crear el repositorio con el comando : 
  
-`helm package apache_prueba`, esto básicamente comprimirá toda la estructura que contiene el repositorio Helm (Chart, values,templates ,etc)
+```bash
+helm package apache_prueba
+```
+
+esto básicamente comprimirá toda la estructura que contiene el repositorio Helm (Chart, values,templates ,etc)
 
 * Luego se procede a crear el index con el siguiente comando:
 
-`helm repo index .`
+```bash
+ helm repo index .
+ ```
 
 * Por último se publica el repositorio en algún website , para este caso se hace uso de _GitHub Pages ref https://pages.github.com/_ 
 
@@ -40,10 +46,10 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
 * Se agrega el repositorio con:
 
-  ```bash
-  helm repo add apache https://ajmezav.github.io/helmcharts/
-  helm repo update
-  ```
+ ```bash
+ helm repo add apache https://ajmezav.github.io/helmcharts/
+ helm repo update
+ ```
  
 * Validar que se agrego el repositorio: 
 
