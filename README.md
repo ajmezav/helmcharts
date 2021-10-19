@@ -1,6 +1,6 @@
 ### Helm charts: apache prueba
 
-Este repositorio tiene el chart para instalar un apache de prueba en un cluster de K8s, el objetivo de este ejercicio se realizó para practicar la creación de un Chart propio. Los pasos que se siguieron fueron los siguientes:
+Este repositorio tiene el chart para instalar un apache de prueba en un cluster de K8s, el objetivo de este ejercicio se realizó para practicar la creación de un Chart propio. El deployment a usar es el mismo de este ejercicio: https://github.com/ajmezav/Cronjob-with-kubectl---restart-deployment-apache/blob/main/deployment_apache.yaml . Los pasos que se siguieron fueron los siguientes:
  
  * Se crea una carpeta donde se va almacenar toda la información del Chart y templates
  
