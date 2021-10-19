@@ -37,8 +37,8 @@ Este repositorio tiene el chart para instalar un apache de prueba en un cluster 
 
 * Se agrega el repositorio con:
 
- `helm repo add apache https://ajmezav.github.io/helmcharts/
-  helm repo update`
+ `helm repo add apache https://ajmezav.github.io/helmcharts/`
+  `helm repo update`
  
 * Validar que se agrego el repositorio: 
 
@@ -74,7 +74,7 @@ Para ver qué opciones se pueden configurar en un chart, use `helm show values a
 
 ### Listar y remover Repos de Helm
 
-`helm repo list
-helm repo remove apache`
+`helm repo list`
+`helm repo remove apache`
 
-___Ref:___ _https://helm.sh/es/docs/intro/using_helm/_
+_Ref:_ _https://helm.sh/es/docs/intro/using_helm/_
