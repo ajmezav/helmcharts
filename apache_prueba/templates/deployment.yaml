@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webserver1
+  name: webserver
   labels:
     app: webserver
 spec:
@@ -33,3 +33,20 @@ spec:
     - protocol: TCP
       port: 80 #puerto en el que servicio va escuchar
       targetPort: 80 # A que puerto dentro del pod voy a consumir
+      
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hola
+  labels:
+    app: hola
+spec:
+  type: ClusterIP
+  selector:
+    app: webserver
+  ports:
+    - protocol: TCP
+      port: 80 #puerto en el que servicio va escuchar
+      targetPort: 80 # A que puerto dentro del pod voy a consumir
+
